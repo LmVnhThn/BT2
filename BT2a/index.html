@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Giải Phương Trình </title>
+ <style>
+#cn {
+    text-align: center;
+    color: #00FFCC;
+    font-size: 45px;
+  }
+  img.x{
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    z-index: -1;
+  }
+  img.y{
+    position: absolute;
+    right: 25px;
+    top: 200px; 
+    z-index: -1;
+  }
+</style>
+<body { background="https://www.vnecotec.com/wp-content/uploads/2020/11/IoT-Platform-770x400.jpg">
+  <h1 id="cn">ĐẠI HỌC CẦN THƠ</h1>
+  <h2 id="cn">CÔNG NGHỆ IOT VÀ ỨNG DỤNG</h2>
+  
+  <img class="x" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/6c/Logo_Dai_hoc_Can_Tho.svg/2048px-Logo_Dai_hoc_Can_Tho.svg.png" width="90" height="auto">
+</body>
+<!DOCTYPE html>
+<html><head><style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF6666;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+  color: white;
+  background-color: #CC9966;
+  font-weight: bold;
+}
+.active {
+  background-color: #339966;
+  color: white;
+}
+</style>
+<style>
+  div.nd {
+    border-style: dashed;
+    border-radius: 10px;
+    border: 5px solid #99CC66;
+    background-color: #00CC99;
+    margin: 20px 500px 20px 20px;
+  }
+  div.nn {
+    border-style: solid;
+    border-radius: 10px;
+    border: 5px solid #99CC66;
+    background-color: #00CC99;
+    margin: 20px 500px 20px 20px;
+  }
+h2 {
+  color: Yellow;
+}
+p
+ {
+  color: Blue;
+}
+
+}
+*
+        {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .Main
+        {
+            border: solid 1px #33FF99;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .Top
+        {
+            background-color: #33FF99;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 5px 0;
+            color: white;
+        }
+        .Bot
+        {
+            padding: 5px 0;
+        }
+        .ButtonFUN
+        {
+            padding: 15px 25px;
+            outline: none !important;
+            color: #fff;
+            background-color: #33FF99;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin: 10px 0;
+        }
+        .ButtonFUN:hover
+        {
+            background-color: #2578b3 !important;
+        }
+        .ButtonFUN:active
+        {
+            background-color: #33FF99;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .Button
+        {
+            margin: 100px 0;
+        }
+    </style>
+    </head>
+<body>
+
+  <ul>
+    <li><a href="Thong tin sinh vien "><b>Thông tin sinh viên</b></a></li>
+              <li><a href="Ppt bac 2"><b>Giải phương trình bậc hai</b></a></li>
+              <li><a href="Do thi"><b>Vẽ đồ thị</b></a></li>
+  
+</ul>
+<div class="container">
+        <div class="Main">
+            <div class="Top">
+                <h4>
+                    Giải phương trình bậc 2
+                </h4>
+            </div>
+            <div class="Bot">
+                <div class="Text"><br><br>
+                   <h2> <span id="A">a</span>x<sup>2</sup>+<span id="B">b</span>x+<span id="C">c</span>=0 (a≠0)</h2>
+                    <br>
+                    <span id="End"></span>
+                </div>
+                <div class="Button">
+                    <button class="ButtonFUN" type="button" onclick="CheckA()">Nhập A</button>
+                    <button class="ButtonFUN" type="button" onclick="EnterB()">Nhập B</button>
+                    <button class="ButtonFUN" type="button" onclick="EnterC()">Nhập C</button>
+                    <button class="ButtonFUN" type="button" style="background-color: green" onclick="Done()">Giải phương trình</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function CheckA () {
+            do {
+                a = prompt('Nhập giá trị a');
+            } while (a == 0);
+            document.getElementById('A').innerHTML = a;
+        }
+        function EnterB () {
+            b = prompt('Nhập giá trị b');
+            document.getElementById('B').innerHTML = b;
+        }
+        function EnterC () {
+            c = prompt('Nhập giá trị b');
+            document.getElementById('C').innerHTML = c;
+        }
+        function Done () {
+            delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                document.getElementById('End').innerHTML = 'Phương trình vô nghiệm';
+            } else if (delta == 0) {
+                nk = -b / (2 * a);
+                document.getElementById('End').innerHTML = 'Phương trình có nghiệm kép:' + '<br>' + ' x<sub>1</sub> = x<sub>2</sub> = ' + nk;
+            } else {
+                n1 = (-b + Math.sqrt(delta)) / (2 * a);
+                n2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById('End').innerHTML = 'Phương trình có 2 nghiệm phân biệt:' + '<br>' + 'x<sub>1</sub> = ' + n1 + '<br>' + 'x<sub>2</sub> = ' + n2;
+            }
+        }
+    </script><br><br>
+    <h3><a  href="https://www.24h.com.vn/">Về Trang Chủ</a></h3>
+</body>
+</html>
